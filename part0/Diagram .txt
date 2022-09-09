@@ -1,4 +1,4 @@
-title Diagram 
+title Ex 0.4 New Note Diagram 
 
 browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
 note over server: 
@@ -6,9 +6,9 @@ server responds HTTP 302 a
 URL redirect server asks the browser 
 to do a new HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes 
 end note
-server->browser: HTML Code
+server-->browser: URL document/redirect
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
-server-->browser: HTML-code
+server-->browser: notes HTML-code
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
 server-->browser: main.css
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
