@@ -10,8 +10,12 @@ export const App = () => {
     event.preventDefault();
     const personObject = {      
       name: newName
+    }    
+    if(person.find(e => e.name === newName)) {
+      alert( ` ${newName} is already added to the Phonebook`)
+      setNewName('');
+      return
     }
-    console.log(personObject);
     setPersons(person.concat(personObject));
     setNewName('');
   }
