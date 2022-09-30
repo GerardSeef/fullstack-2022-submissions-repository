@@ -67,7 +67,7 @@ export const App = () => {
           { person
               .filter((person) => {  
                 if(filterWord === '') return true;
-                return person.name.includes(filterWord);
+                  return person.name.toLowerCase().includes(filterWord.toLowerCase());
               })
               .map( person => <li key={person.name}> {person.name} {person.number}</li>) }
         </ul>
