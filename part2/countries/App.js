@@ -16,14 +16,18 @@ export const App = () => {
       })
   },[])
   
-  const handleFilterChange = (event) => {      
+  const handleFilterChange = (event) => { 
     setFilterWord(event.target.value);
     }
-      
+  const handlerButtonCountry = (event) => {
+    console.log(event);
+    setFilterWord('Argentina');
+  }
+
   return (
     <div>
       Country to find <input onChange={handleFilterChange}/>          
-      { <Display country={country} filterWord={filterWord} /> }        
+      { <Display country={country} filterWord={filterWord} handleFilterChange={handlerButtonCountry} /> }        
     </div>    
   );
 }
